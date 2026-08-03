@@ -9,6 +9,8 @@
     <title>粉止水导航官网</title>
     <link rel="preload" href="abcd.jpg" as="image" type="image/jpeg">
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- ===== 不蒜子统计（真实云端共享计数） ===== -->
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
     <style>
         /* ===== 全局 ===== */
         * {
@@ -282,7 +284,7 @@
             letter-spacing: 0.3px;
         }
 
-        /* ===== 统计卡片 ===== */
+        /* ===== 统计卡片（使用不蒜子真实ID） ===== */
         .stats-wrapper {
             display: flex;
             justify-content: center;
@@ -940,22 +942,22 @@
                 <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=twzimyltm73UGptLHn87Tr%2B8alZgVTxx%2FmVcu%2Fu%2FM24tyHtTa1YISbP5xXMsOtmU&busi_data=eyJncm91cENvZGUiOiIxMDY3MDE0MjM4IiwidG9rZW4iOiJrSmQvQmJ6Z3MwaHVreCszblBEQ2EzZTVjMjRXR0V3N3BDTEpTSkh1SGpPYjZlMk55blRDZUNocjVOeWN6U3ZNIiwidWluIjoiMTEzOTE1NTk1MyJ9&data=4qEL5I4EuKCrrscwkS8JFmNSlvDo7QYjevpMS5AhqFfupVyfiaKAoXNTyGBn4iW3DML42IRuL3thdQau-XvJ5A&svctype=4&tempid=h5_group_info" class="btn btn-secondary" style="animation-delay: 0.8s;" target="_blank">
                     <i class="icon fab fa-qq"></i> QQ群1067014238
                 </a>
-                <!-- 查询器按钮（链接已固定） -->
+                <!-- 查询器按钮 -->
                 <a href="http://jipin.cc.cd/yanzheng/" id="queryBtn" class="btn btn-primary btn-full" style="animation-delay: 0.9s;">
                     <i class="icon fas fa-external-link-alt"></i> 点击跳转网页版查询器
                 </a>
             </div>
 
-            <!-- 访客量统计 -->
+            <!-- 访客量统计（真实云端共享） -->
             <div class="stats-wrapper">
                 <div class="stat-card">
                     <span class="stat-icon"><i class="fas fa-eye"></i></span>
-                    <span class="stat-number" id="visitCount">0</span>
+                    <span class="stat-number" id="busuanzi_value_page_pv">0</span>
                     <div class="stat-label">总访问量</div>
                 </div>
                 <div class="stat-card">
                     <span class="stat-icon"><i class="fas fa-user"></i></span>
-                    <span class="stat-number" id="visitorCount">0</span>
+                    <span class="stat-number" id="busuanzi_value_site_uv">0</span>
                     <div class="stat-label">访客人数</div>
                 </div>
             </div>
@@ -1280,21 +1282,6 @@
                 songItems.forEach(li => li.classList.remove('playing'));
             });
         });
-
-        // ===== 访客量模拟 =====
-        (function() {
-            let pv = parseInt(localStorage.getItem('pv') || '0');
-            pv++;
-            localStorage.setItem('pv', pv);
-            document.getElementById('visitCount').textContent = pv;
-            let uv = parseInt(localStorage.getItem('uv') || '0');
-            if (!localStorage.getItem('uv_visited')) {
-                uv++;
-                localStorage.setItem('uv', uv);
-                localStorage.setItem('uv_visited', '1');
-            }
-            document.getElementById('visitorCount').textContent = uv;
-        })();
 
         // ===== 运行天数计算（从今天开始） =====
         (function() {
