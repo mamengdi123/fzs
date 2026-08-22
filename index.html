@@ -17,7 +17,8 @@
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
         }
-        html, body {
+        html,
+        body {
             min-height: 100%;
             overflow-x: hidden;
             overflow-y: auto;
@@ -33,37 +34,78 @@
             line-height: 1.6;
         }
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         @keyframes breathe {
-            0%, 100% { transform: scale(1); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
-            50% { transform: scale(1.05); box-shadow: 0 12px 30px rgba(0,0,0,0.4); }
+            0%,
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+            }
         }
         @keyframes pulseFade {
-            0% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.2); opacity: 0.3; }
-            100% { transform: scale(1); opacity: 1; }
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.3;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
         }
         .pulse-fade-animation {
             animation: pulseFade 0.5s cubic-bezier(0.4, 0.2, 1);
             display: inline-block;
         }
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
         @keyframes sloganPulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.08); }
+            0%,
+            100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.08);
+            }
         }
         @keyframes colorFlow {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 300% 0%; }
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 300% 0%;
+            }
         }
 
         .container {
@@ -490,9 +532,11 @@
 
         .modal-overlay {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.7);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
             display: flex;
@@ -502,13 +546,13 @@
         }
         .modal-content {
             background: #161b22;
-            border: 1px solid rgba(255,255,255,0.08);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             width: 90%;
             max-width: 380px;
             padding: 28px 24px;
             text-align: center;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
         }
         .modal-icon {
             font-size: 2.5em;
@@ -527,7 +571,7 @@
             margin-bottom: 16px;
         }
         .modal-message {
-            background: rgba(255,255,255,0.03);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 12px;
             padding: 16px 18px;
             text-align: left;
@@ -540,8 +584,12 @@
             line-height: 1.6;
             margin-bottom: 8px;
         }
-        .modal-message p:last-child { margin-bottom: 0; }
-        .modal-message strong { color: #e6edf3; }
+        .modal-message p:last-child {
+            margin-bottom: 0;
+        }
+        .modal-message strong {
+            color: #e6edf3;
+        }
         .modal-btn {
             padding: 12px 32px;
             border-radius: 12px;
@@ -551,7 +599,7 @@
             cursor: pointer;
             color: #fff;
             background: #3b82f6;
-            box-shadow: 0 4px 16px rgba(59,130,246,0.3);
+            box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
             transition: background 0.2s, transform 0.15s;
             display: inline-flex;
             align-items: center;
@@ -563,17 +611,24 @@
             background: #4a8df7;
             transform: translateY(-2px);
         }
-        .modal-btn:active { transform: translateY(0); }
+        .modal-btn:active {
+            transform: translateY(0);
+        }
         .modal-btn .loading-spinner {
             display: none;
-            width: 20px; height: 20px;
-            border: 3px solid rgba(255,255,255,0.25);
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, 0.25);
             border-top: 3px solid #fff;
             border-radius: 50%;
             animation: spin 0.8s linear infinite;
         }
-        .modal-btn.loading .loading-text { display: none; }
-        .modal-btn.loading .loading-spinner { display: block; }
+        .modal-btn.loading .loading-text {
+            display: none;
+        }
+        .modal-btn.loading .loading-spinner {
+            display: block;
+        }
 
         .payment-island {
             position: fixed;
@@ -593,13 +648,14 @@
             font-size: 14px;
             opacity: 0;
             overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,.35);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, .35);
         }
         .payment-island.show {
             animation: islandOpen 2.8s ease forwards;
         }
         .payment-check {
-            width: 22px; height: 22px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             background: #30d158;
             display: flex;
@@ -608,12 +664,30 @@
             font-weight: bold;
             color: #fff;
         }
-        .payment-text { white-space: nowrap; font-weight: 600; }
+        .payment-text {
+            white-space: nowrap;
+            font-weight: 600;
+        }
         @keyframes islandOpen {
-            0% { opacity: 0; width: 40px; transform: translateX(-50%) scale(.2); }
-            15% { opacity: 1; width: 180px; transform: translateX(-50%) scale(1); }
-            75% { opacity: 1; width: 180px; }
-            100% { opacity: 0; width: 40px; transform: translateX(-50%) scale(.2); }
+            0% {
+                opacity: 0;
+                width: 40px;
+                transform: translateX(-50%) scale(.2);
+            }
+            15% {
+                opacity: 1;
+                width: 180px;
+                transform: translateX(-50%) scale(1);
+            }
+            75% {
+                opacity: 1;
+                width: 180px;
+            }
+            100% {
+                opacity: 0;
+                width: 40px;
+                transform: translateX(-50%) scale(.2);
+            }
         }
         .top-notice {
             position: fixed;
@@ -630,21 +704,39 @@
             opacity: 0;
             transform: translateX(-100%);
         }
-        .top-notice.in { animation: slideInCenter 1s ease forwards; }
-        .top-notice.out { animation: slideOutLeft 0.8s ease forwards; }
+        .top-notice.in {
+            animation: slideInCenter 1s ease forwards;
+        }
+        .top-notice.out {
+            animation: slideOutLeft 0.8s ease forwards;
+        }
         @keyframes slideInCenter {
-            0% { opacity: 0; transform: translateX(-100%); }
-            100% { opacity: 1; transform: translateX(0); }
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         @keyframes slideOutLeft {
-            0% { opacity: 1; transform: translateX(0); }
-            100% { opacity: 0; transform: translateX(-100%); }
+            0% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
         }
 
         .about-modal-overlay {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: #0d1117;
             z-index: 9999;
             display: none;
@@ -652,8 +744,14 @@
             padding: 20px;
             padding-top: 30px;
         }
-        .about-modal-overlay.active { display: block; animation: fadeIn 0.4s ease; }
-        .about-modal-content { max-width: 420px; margin: 0 auto; }
+        .about-modal-overlay.active {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        .about-modal-content {
+            max-width: 420px;
+            margin: 0 auto;
+        }
         .about-header {
             display: flex;
             align-items: center;
@@ -663,10 +761,11 @@
         .about-back-btn {
             position: absolute;
             left: 0;
-            background: rgba(255,255,255,0.06);
-            border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.08);
             color: #3b82f6;
-            width: 40px; height: 40px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -675,10 +774,22 @@
             transition: background 0.2s;
             cursor: pointer;
         }
-        .about-back-btn:hover { background: rgba(255,255,255,0.12); }
-        .about-title-group { flex: 1; text-align: center; }
-        .about-title { font-size: 22px; font-weight: 700; color: #e6edf3; }
-        .about-subtitle { font-size: 14px; color: #8b949e; }
+        .about-back-btn:hover {
+            background: rgba(255, 255, 255, 0.12);
+        }
+        .about-title-group {
+            flex: 1;
+            text-align: center;
+        }
+        .about-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #e6edf3;
+        }
+        .about-subtitle {
+            font-size: 14px;
+            color: #8b949e;
+        }
         .about-cards-wrapper {
             display: flex;
             gap: 16px;
@@ -686,8 +797,8 @@
             flex-wrap: wrap;
         }
         .about-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
             padding: 18px 14px;
             flex: 1;
@@ -695,16 +806,27 @@
             text-align: center;
             transition: background 0.2s;
         }
-        .about-card:hover { background: rgba(255,255,255,0.06); }
+        .about-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
         .about-card img {
-            width: 60px; height: 60px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             object-fit: cover;
-            border: 2px solid rgba(255,255,255,0.08);
+            border: 2px solid rgba(255, 255, 255, 0.08);
             margin-bottom: 8px;
         }
-        .about-card-name { font-size: 16px; font-weight: 700; color: #e6edf3; }
-        .about-card-role { font-size: 12px; color: #8b949e; margin-bottom: 8px; }
+        .about-card-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: #e6edf3;
+        }
+        .about-card-role {
+            font-size: 12px;
+            color: #8b949e;
+            margin-bottom: 8px;
+        }
         .about-card-btn {
             padding: 8px 12px;
             font-size: 12px;
@@ -718,7 +840,9 @@
             border: none;
             transition: background 0.2s;
         }
-        .about-card-btn:hover { background: #4a8df7; }
+        .about-card-btn:hover {
+            background: #4a8df7;
+        }
         .about-tags {
             display: flex;
             flex-wrap: wrap;
@@ -727,29 +851,32 @@
             margin-top: 8px;
         }
         .about-tag {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 10px;
             padding: 2px 8px;
             font-size: 10px;
             color: #8b949e;
         }
         .about-team-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 16px;
             padding: 18px;
             margin-bottom: 18px;
         }
         .about-team-title {
-            font-size: 16px; font-weight: 700;
+            font-size: 16px;
+            font-weight: 700;
             color: #e6edf3;
             margin-bottom: 8px;
             display: flex;
             align-items: center;
             gap: 8px;
         }
-        .about-team-title i { color: #3b82f6; }
+        .about-team-title i {
+            color: #3b82f6;
+        }
         .about-team-desc {
             font-size: 14px;
             color: #b1bac4;
@@ -757,22 +884,29 @@
             text-align: justify;
         }
         .about-location {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 12px;
             padding: 12px 16px;
             display: flex;
             align-items: center;
             gap: 12px;
         }
-        .about-location i { color: #3b82f6; }
-        .about-location span { color: #8b949e; font-size: 14px; font-weight: 500; }
+        .about-location i {
+            color: #3b82f6;
+        }
+        .about-location span {
+            color: #8b949e;
+            font-size: 14px;
+            font-weight: 500;
+        }
 
         .music-toggle {
             position: fixed;
             bottom: 30px;
             right: 30px;
-            width: 54px; height: 54px;
+            width: 54px;
+            height: 54px;
             border-radius: 50%;
             background: #3b82f6;
             color: #fff;
@@ -781,24 +915,27 @@
             justify-content: center;
             cursor: pointer;
             z-index: 9999;
-            box-shadow: 0 8px 25px rgba(59,130,246,0.3);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
             transition: transform 0.2s, box-shadow 0.2s;
             font-size: 1.4em;
             border: none;
         }
-        .music-toggle:hover { transform: scale(1.08); box-shadow: 0 8px 30px rgba(59,130,246,0.4); }
+        .music-toggle:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.4);
+        }
         .music-panel {
             position: fixed;
             bottom: 95px;
             right: 30px;
             width: 280px;
             background: #161b22;
-            border: 1px solid rgba(255,255,255,0.06);
+            border: 1px solid rgba(255, 255, 255, 0.06);
             border-radius: 20px;
             padding: 18px 20px 20px;
             color: #e6edf3;
             z-index: 9998;
-            box-shadow: 0 15px 45px rgba(0,0,0,0.6);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
             transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
             transform-origin: bottom right;
             opacity: 0;
@@ -814,7 +951,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
             padding-bottom: 10px;
             margin-bottom: 14px;
         }
@@ -825,9 +962,10 @@
         }
         .music-close-btn {
             cursor: pointer;
-            width: 30px; height: 30px;
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-            background: rgba(255,255,255,0.04);
+            background: rgba(255, 255, 255, 0.04);
             border: none;
             color: #8b949e;
             transition: background 0.2s, color 0.2s;
@@ -835,7 +973,10 @@
             align-items: center;
             justify-content: center;
         }
-        .music-close-btn:hover { background: rgba(255,0,0,0.15); color: #f85149; }
+        .music-close-btn:hover {
+            background: rgba(255, 0, 0, 0.15);
+            color: #f85149;
+        }
         .music-controls {
             display: flex;
             gap: 10px;
@@ -859,13 +1000,18 @@
             background: #3b82f6;
             color: #fff;
         }
-        .music-play-btn:hover { background: #4a8df7; }
-        .music-stop-btn {
-            background: rgba(255,255,255,0.04);
-            color: #8b949e;
-            border: 1px solid rgba(255,255,255,0.06);
+        .music-play-btn:hover {
+            background: #4a8df7;
         }
-        .music-stop-btn:hover { background: rgba(255,0,0,0.08); color: #f85149; }
+        .music-stop-btn {
+            background: rgba(255, 255, 255, 0.04);
+            color: #8b949e;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .music-stop-btn:hover {
+            background: rgba(255, 0, 0, 0.08);
+            color: #f85149;
+        }
         .music-list {
             max-height: 160px;
             overflow-y: auto;
@@ -885,7 +1031,7 @@
             border-radius: 12px;
             cursor: pointer;
             transition: 0.2s;
-            background: rgba(255,255,255,0.02);
+            background: rgba(255, 255, 255, 0.02);
             margin-bottom: 4px;
             display: flex;
             align-items: center;
@@ -895,43 +1041,109 @@
             border: 1px solid transparent;
         }
         .music-list li:hover {
-            background: rgba(255,255,255,0.06);
+            background: rgba(255, 255, 255, 0.06);
             color: #e6edf3;
         }
         .music-list li.playing {
-            background: rgba(59,130,246,0.08);
-            border-color: rgba(59,130,246,0.2);
+            background: rgba(59, 130, 246, 0.08);
+            border-color: rgba(59, 130, 246, 0.2);
             color: #e6edf3;
         }
-        .music-list li i { width: 20px; text-align: center; color: #3b82f6; }
-        .music-list::-webkit-scrollbar { width: 4px; }
-        .music-list::-webkit-scrollbar-track { background: transparent; }
-        .music-list::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        .music-list li i {
+            width: 20px;
+            text-align: center;
+            color: #3b82f6;
+        }
+        .music-list::-webkit-scrollbar {
+            width: 4px;
+        }
+        .music-list::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .music-list::-webkit-scrollbar-thumb {
+            background: #3b82f6;
+            border-radius: 4px;
+        }
 
         @media (max-width: 480px) {
-            body { padding: 14px; }
-            .card { padding: 20px 16px; }
-            .avatar-container { width: 64px; height: 64px; }
-            .slogan-text { font-size: 15px; }
-            .time-display { font-size: 1.8em; }
-            .main-buttons { gap: 10px; }
-            .btn { font-size: 0.8em; padding: 12px 8px; }
-            .stat-card { padding: 8px 12px; min-width: 70px; }
-            .stat-card .stat-number { font-size: 18px; }
-            .music-panel { right: 16px; bottom: 85px; width: 240px; padding: 16px; }
-            .music-toggle { right: 16px; bottom: 20px; width: 48px; height: 48px; font-size: 1.2em; }
-            .top-notice { font-size: 14px; padding: 8px 18px; }
-            .blessing-divider span { font-size: 0.65em; }
-            .days-counter { font-size: 0.7em; padding: 8px 12px; }
-            .stats-big-block { grid-template-columns: 1fr 1fr; }
-            .stats-big-block .stat-item:last-child { grid-column: span 2; }
+            body {
+                padding: 14px;
+            }
+            .card {
+                padding: 20px 16px;
+            }
+            .avatar-container {
+                width: 64px;
+                height: 64px;
+            }
+            .slogan-text {
+                font-size: 15px;
+            }
+            .time-display {
+                font-size: 1.8em;
+            }
+            .main-buttons {
+                gap: 10px;
+            }
+            .btn {
+                font-size: 0.8em;
+                padding: 12px 8px;
+            }
+            .stat-card {
+                padding: 8px 12px;
+                min-width: 70px;
+            }
+            .stat-card .stat-number {
+                font-size: 18px;
+            }
+            .music-panel {
+                right: 16px;
+                bottom: 85px;
+                width: 240px;
+                padding: 16px;
+            }
+            .music-toggle {
+                right: 16px;
+                bottom: 20px;
+                width: 48px;
+                height: 48px;
+                font-size: 1.2em;
+            }
+            .top-notice {
+                font-size: 14px;
+                padding: 8px 18px;
+            }
+            .blessing-divider span {
+                font-size: 0.65em;
+            }
+            .days-counter {
+                font-size: 0.7em;
+                padding: 8px 12px;
+            }
+            .stats-big-block {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stats-big-block .stat-item:last-child {
+                grid-column: span 2;
+            }
         }
         @media (max-width: 360px) {
-            .main-buttons { grid-template-columns: 1fr; }
-            .stats-wrapper { flex-wrap: wrap; gap: 10px; }
-            .about-cards-wrapper { flex-direction: column; }
-            .stats-big-block { grid-template-columns: 1fr; }
-            .stats-big-block .stat-item:last-child { grid-column: span 1; }
+            .main-buttons {
+                grid-template-columns: 1fr;
+            }
+            .stats-wrapper {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .about-cards-wrapper {
+                flex-direction: column;
+            }
+            .stats-big-block {
+                grid-template-columns: 1fr;
+            }
+            .stats-big-block .stat-item:last-child {
+                grid-column: span 1;
+            }
         }
     </style>
 </head>
@@ -1029,16 +1241,29 @@
                 <a href="http://jipin.cc.cd/yanzheng/" id="queryBtn" class="btn btn-primary btn-full" style="animation-delay: 0.9s;">
                     <i class="icon fas fa-external-link-alt"></i> 点击跳转网页版查询器
                 </a>
+
+                <!-- ============================================================ -->
+                <!-- =====  【新增】两个自定义按钮  ===== -->
+                <!-- =====  修改下方 href="你的链接" 和 按钮文字 即可  ===== -->
+                <!-- ============================================================ -->
+                <a href="https://wwbas.lanzouv.com/i35OS43eyb2j" class="btn btn-secondary btn-full" style="animation-delay: 1.0s;" target="_blank">
+                    <i class="icon fas fa-link"></i> 新vpn下载 节点更稳定（密码jpnb）
+                </a>
+                <a href="http://jipin.cc.cd/wangzhe/" class="btn btn-secondary btn-full" style="animation-delay: 1.1s;" target="_blank">
+                    <i class="icon fas fa-link"></i> 王者查询（接口用的别人的）
+                </a>
+                <!-- ===== 自定义按钮结束 ===== -->
+
             </div>
 
             <!-- ===== 数据统计大板块 ===== -->
             <div class="stats-big-block">
                 <div class="stat-item">
-                    <span class="number" id="dataDays">298</span>
+                    <span class="number" id="dataDays">353</span>
                     <span class="label">粉止水玩数据号 天</span>
                 </div>
                 <div class="stat-item">
-                    <span class="number" id="dataSales">985</span>
+                    <span class="number" id="dataSales">956</span>
                     <span class="label">粉止水卖了 个号</span>
                 </div>
                 <div class="stat-item">
@@ -1168,12 +1393,12 @@
         // ===== ⬇️ 用户配置区：直接修改这里的数字即可生效 =====
         // ============================================================
         const USER_CONFIG = {
-            dataDays: 298,        // ① 粉止水玩数据号 初始天数（今天显示298，明天自动+1）
-            sales: 216,           // ② 粉止水卖号 初始数量（每天随机加0~4）
-            complaints: 21,       // ③ 投诉数量 初始数量（每周一自动+1）
-            uv: 218,              // ④ 访客人数（新设备首次进入+1）
-            pv: 521,              // ⑤ 总访问量（每次刷新页面+1）
-            guardDays: 9          // ⑥ 底部“安全守护” 初始天数（昨天第8天，今天第9天，明天自动+1）
+            dataDays: 353, // ① 粉止水玩数据号 初始天数（今天显示353，明天自动+1）
+            sales: 956, // ② 粉止水卖号 初始数量（每天固定+2）
+            complaints: 21, // ③ 投诉数量 初始数量（每周一自动+1）
+            uv: 218, // ④ 访客人数（新设备首次进入+1）
+            pv: 521, // ⑤ 总访问量（每次刷新页面+1）
+            guardDays: 9 // ⑥ 底部“安全守护” 初始天数（昨天第8天，今天第9天，明天自动+1）
         };
         // ============================================================
 
@@ -1403,7 +1628,8 @@
         // ============================================================
         function getTodayStr() {
             const d = new Date();
-            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+            return d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2,
+            '0');
         }
 
         function isMonday() {
@@ -1428,11 +1654,9 @@
 
             if (!data) {
                 // 第一次使用，根据 USER_CONFIG 计算起始日期
-                // dataDays: 今天显示 USER_CONFIG.dataDays，起始日期 = 今天 - (dataDays - 1) 天
                 const dataStart = new Date(today);
                 dataStart.setDate(today.getDate() - (USER_CONFIG.dataDays - 1));
 
-                // guardDays: 今天显示 USER_CONFIG.guardDays，起始日期 = 今天 - (guardDays - 1) 天
                 const guardStart = new Date(today);
                 guardStart.setDate(today.getDate() - (USER_CONFIG.guardDays - 1));
 
@@ -1451,22 +1675,38 @@
                 return init;
             }
 
-            // 已有数据，但为防止手动修改配置后日期不对，我们检查并修正起始日期
             let stats = JSON.parse(data);
-            // 如果用户修改了配置中的 dataDays，我们希望重新计算起始日期，但保留其他累计数据
-            // 这里简单起见，如果起始日期不存在或格式不对，则重新生成
-            if (!stats.dataStart || isNaN(new Date(stats.dataStart).getTime())) {
-                const dataStart = new Date(today);
-                dataStart.setDate(today.getDate() - (USER_CONFIG.dataDays - 1));
-                stats.dataStart = dataStart.toISOString().split('T')[0];
+
+            // ---- 检查并修正配置（让用户修改 USER_CONFIG 后刷新即可生效） ----
+            // 1) dataDays：重新计算期望的起始日期
+            const expectedStart = new Date(today);
+            expectedStart.setDate(today.getDate() - (USER_CONFIG.dataDays - 1));
+            const expectedStartStr = expectedStart.toISOString().split('T')[0];
+            if (stats.dataStart !== expectedStartStr) {
+                stats.dataStart = expectedStartStr;
             }
-            if (!stats.guardStart || isNaN(new Date(stats.guardStart).getTime())) {
-                const guardStart = new Date(today);
-                guardStart.setDate(today.getDate() - (USER_CONFIG.guardDays - 1));
-                stats.guardStart = guardStart.toISOString().split('T')[0];
+
+            // 2) guardDays：重新计算期望的守护起始日期
+            const expectedGuardStart = new Date(today);
+            expectedGuardStart.setDate(today.getDate() - (USER_CONFIG.guardDays - 1));
+            const expectedGuardStr = expectedGuardStart.toISOString().split('T')[0];
+            if (stats.guardStart !== expectedGuardStr) {
+                stats.guardStart = expectedGuardStr;
             }
-            // 确保卖号、投诉等初始值至少为配置值（但配置只影响首次，后续不再覆盖）
-            // 为了防止丢失，如果销售数小于配置值（可能被重置），则重置为配置值？这里不强制，保留已有累计
+
+            // 3) sales：如果配置值与存储值不同，则用配置值覆盖（使用户修改后生效）
+            if (stats.sales !== USER_CONFIG.sales) {
+                stats.sales = USER_CONFIG.sales;
+                stats.salesLastUpdate = todayStr; // 重置更新标记，确保当天不再额外增加
+            }
+
+            // 4) complaints：如果配置值与存储值不同，则用配置值覆盖
+            if (stats.complaints !== USER_CONFIG.complaints) {
+                stats.complaints = USER_CONFIG.complaints;
+            }
+
+            // 保存修正后的数据
+            localStorage.setItem('fzsStats', JSON.stringify(stats));
             return stats;
         }
 
@@ -1482,16 +1722,9 @@
             if (dataDays < 1) dataDays = 1;
             document.getElementById('dataDays').textContent = dataDays;
 
-            // 2. 卖号数量
+            // 2. 卖号数量（每天固定 +2）
             if (stats.salesLastUpdate !== todayStr) {
-                let increment = 0;
-                const rand = Math.random();
-                if (rand < 0.40) increment = 0;
-                else if (rand < 0.55) increment = 1;
-                else if (rand < 0.70) increment = 2;
-                else if (rand < 0.85) increment = 3;
-                else increment = 4;
-                stats.sales += increment;
+                stats.sales += 2; // 每天固定增加 2
                 stats.salesLastUpdate = todayStr;
                 localStorage.setItem('fzsStats', JSON.stringify(stats));
             }
